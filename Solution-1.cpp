@@ -1,10 +1,12 @@
 #include<iostream>
 using namespace std;
+
 void square(int r, int c)
 {
-	for (int i = 0; i < r; i++)
+	int i,j;
+	for (i=0;i<r;i++)
 	{
-		for (int j = 0; j < c; j++)
+		for (j=0;j<c;j++)
 		{
 			if (i == 0)
 			{cout << "*";}
@@ -36,8 +38,8 @@ void circle(int r, int c) {
 	int lastblock = firstblock + maxc - 1;
 	int firstleft = r - maxr - maxr / 2 ;//to find the 1st block colum wise to print * gt
 	int lastleft = firstleft + maxr - 1;
-	int binod1 = firstblock - 1;
-	int binod2 = lastblock + 1;
+	int f= firstblock - 1;
+	int l= lastblock + 1;
 
 	for (int i = 0; i < r; i++)
 	{
@@ -51,9 +53,9 @@ void circle(int r, int c) {
 				} else {
 					cout << " ";
 				}
-			} else if (i == 1 || i == r - 2)
+			} else if (i==1 || i==r - 2)
 			{
-				if ( j == binod2 || j == binod1)
+				if (j==l || j==f)
 				{
 					cout << "*";
 				} else {
@@ -62,7 +64,7 @@ void circle(int r, int c) {
 			} else {
 				if (i >= firstleft && i <= lastleft)
 				{
-					if (j == 0 || j == c - 1)
+					if (j==0 || j==c-1)
 					{
 						cout << "*";
 					} else {
