@@ -23,9 +23,7 @@ public:
 	}
 	void setLength(float a) {
 		if (a >= 0.0 && a <= 20.0)
-		{length = a;} else {
-			cout << "please enter valid value";
-		}
+		{length = a;}
 
 	}
 	int getWidth() {
@@ -34,9 +32,7 @@ public:
 	void setWidth(int a)
 	{
 		if (a >= 0.0 && a <= 20.0)
-		{width = a;} else {
-			cout << "please enter valid value";
-		}
+		{width = a;}
 	}
 };
 int main()
